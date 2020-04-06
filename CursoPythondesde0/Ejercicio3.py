@@ -6,17 +6,9 @@
 # o al final, la dirección también será errónea
 
 
-TIENE_ARROBA = False
-NUMERO_ARROBAS = 0
-
 email = input("Introduce tu dirección de email: ")
 
-for i in email:
-    if (i == "@"):
-        TIENE_ARROBA = True
-        NUMERO_ARROBAS = NUMERO_ARROBAS + 1
-
-if (TIENE_ARROBA and NUMERO_ARROBAS == 1 and email[0] != "@" and email[-1] != "@"):
+if (email.count("@") == 1 and email[0] != "@" and email[-1] != "@"):
     print("El email introducido es correcto")
 else:
     print("El email introducido no es correcto")
