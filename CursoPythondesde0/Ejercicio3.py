@@ -6,29 +6,18 @@
 # o al final, la dirección también será errónea
 
 
-#contador = 0
-#miEmail=input("Introduce tu dirección de email: ")
+TIENE_ARROBA = False
+NUMERO_ARROBAS = 0
 
-#for i in miEmail:
-#    if (i=="@" or i=="."):
-#        contador = contador + 1
+email = input("Introduce tu dirección de email: ")
 
-#if contador == 2:
-#    print("El email es correcto")
-#else:
-#    print("El email no es correcto")
+for i in email:
+    if (i == "@"):
+        TIENE_ARROBA = True
+        NUMERO_ARROBAS = NUMERO_ARROBAS + 1
 
-tiene_arroba = False
-tiene_punto = False
-miEmail=input("Introduce tu dirección de email: ")
-
-for i in miEmail:
-    if (i == "@"): 
-        tiene_arroba = True
-    elif (i == "."):
-        tiene_punto = True
-
-if (tiene_arroba and tiene_punto):
-    print("El email es correcto")
+if (TIENE_ARROBA and NUMERO_ARROBAS == 1):
+    print("El email introducido es correto")
 else:
-    print("El email no es correcto")
+    print("El email introducido no es correcto")
+
